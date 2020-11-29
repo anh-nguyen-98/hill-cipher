@@ -22,4 +22,4 @@ def to_matrix(password, n, type_password):
     return matrix
 
 
-print(to_matrix("ABCD", 2, "al"))
+# print(to_matrix("1203", 2, "numerical"))
