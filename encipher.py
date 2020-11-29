@@ -35,7 +35,7 @@ if not valid:
     print ("Error: length is not a perfect square 4, 9, 16, ... ")
 
 else:
-    matrix = password_utils.to_matrix(password, n)
+    key = password_utils.to_matrix(password, n)
     if password_utils.invertible_matrix(matrix):
         print("Your message is being encoded")
     else:
@@ -47,7 +47,7 @@ P = plaintext_utils.plaintext_to_vector.transform(message, n)
     
     
 #step 3: from plaintext vector to ciphertext vector
-
+C = key @ P
 
 
 
