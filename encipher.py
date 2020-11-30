@@ -8,11 +8,11 @@ Enciphers a plaintext.
 import numpy as np
 import scipy.linalg as lin
 import math as math
-import password_utils.length
-import password_utils.to_matrix
-import password_utils.invertible_matrix
-import plaintext_utils.plaintext_to_vector
-import plaintext_utils.plainvec_to_ciphervec
+import key_utils.length
+import key_utils.to_matrix
+import key_utils.invertible_matrix
+import vec_transformation_utils.str_to_vec
+import vec_transformation_utils.vec_to_vec
 
 
 
@@ -35,25 +35,25 @@ password = input("Password: ")
 
 
 #check valid key
-valid, n = password_utils.length.has_valid_length(len(password))
+valid, n = key_utils.length.has_valid_length(len(password))
 if not valid:
     print ("Error: length is not a perfect square 4, 9, 16, ... ")
 
 else:
-    key = password_utils.to_matrix.to_matrix(password, n, type_password)
-    if password_utils.invertible_matrix.is_invertible(key):
+    key = key_utils.to_matrix.to_matrix(password, n, type_password)
+    if key_utils.invertible_matrix.is_invertible(key):
         print("Your message is being encoded")
     else:
         print('Please change last 2 characters')
 
     
 #step 2: process plaintext to numerical vector
-P = plaintext_utils.plaintext_to_vector.transform(message, n)
+P = vec_transformation_utils.str_to_vec.transform(message, n)
     
     
 #step 3: from plaintext vector to ciphertext vector
 
-C = plaintext_utils.plainvec_to_ciphervec.transform(P, key, alpha_size)
+C = vec_transformation_utils.vec_to_vec.transform(P, key, alpha_size)
 
 ciphertext = ""
 for col in range(C.shape[1]):
@@ -63,6 +63,13 @@ for col in range(C.shape[1]):
 
 
 print (ciphertext)
+
+
+
+
+
+
+
 
 
 
