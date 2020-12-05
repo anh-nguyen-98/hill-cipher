@@ -8,10 +8,10 @@ import key_utils
 
 import vec_transformation_utils
 import vec_transformation_utils
-from alphabet_utils.alphabet import Alphabet
+import alphabet
 
 
-alphabet = Alphabet("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+alphabet = alphabet.Alphabet("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 #step 1:
 print("\nConsole Version")
 print ("\n***WELCOME TO BIJOU & CHRISTINE CRYPTOLAND***\n")
