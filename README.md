@@ -60,13 +60,16 @@ If your password is set up successfully:
 
 **c. View other information**
 
+
   **1. Home page: **
   
 ![homepg](https://github.com/anh-nguyen-98/hill-cipher/blob/main/demo/homepg_top.jpg)
 
+
   **2. About project page:**
 
 ![aboutus_pg](https://github.com/anh-nguyen-98/hill-cipher/blob/main/demo/aboutus_pg_top.jpg)
+
 
   **3. Team page: **
   
